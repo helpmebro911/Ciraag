@@ -37,5 +37,19 @@ hindi_slangs = [
     "teri maiya chod chod kar kardunga bimaar low level bandar, aaj me khake salgam teri bahin ki chut se nikalunga white white balgam.",
     "aaj me khake kela, o teri bahin ki bhosdi marunga akela, randi ma ke chude huy bachche oye.",
     "shishi bhari gulaab ki tootne na dunga, dhyaan laga kar sun, madarchod ki chudi huii aulad teri kaano me holl karu lund marke shishi bhari gulaab ki tootne na dunga, aur teri bahin ko khade khade chodunga mootne na dunga, randi ma ke veshiya bachche oye.",
-    "aaj jo tu bole holi holi, oo teri ma ki bhosde me dal dunga apni yaaro ki loli, aajj jo tu fight chhodh kar bhagga, to tere ma ki bhosde me dalunga apne land ka dhaga."
+    "aaj jo tu bole holi holi, oo teri ma ki bhosde me dal dunga apni yaaro ki loli, aajj jo tu fight chhodh kar bhagga, to tere ma ki bhosde me dalunga apne land ka dhaga.",
+    "aaj mai haath m utha ke basta, teri maa ki chut m bana dunga rasta",
+    "asman kala ho yha nila, teri maa ki bosdi chud chud ke kr dunga gila",
+    "baap ke naam se kalpne wale kutte, teri maa ki chut m maarunga jute hi jute",
+    "aaj jo tu bole holi holi, teri maa ke muh m daal dunga guu ki goli teri maa ka bhosda",
+    "aaj mai kha ke khir, teri aami jaan ki bosdi dunga chir, kaali kutti ke bacche",
+    "oye randi ke bacche teri bhen ki chut ko bana ke rasta, teri bhen ki chut maarunga hasta hasta",
+    "imm chal teri maa ki chut ke ho gye bhut bade baal sabi bhaiya ko mera haat utha ke walekum pardam",
+    "teri maa ki fuddi che lun",
+    "pehn di lodi saali ghasti fuddi rani",
+    "pehn di bhaiyee rani",
+    "kale lun warga teri buthhi aa",
+    "tere bund che lun pawa",
+    "teri maa dii kaale fudde che lola mara",
+    "teri ma de fudde me lora dalke sihma bag jao"
 ]
