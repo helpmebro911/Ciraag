@@ -1,7 +1,8 @@
 class CiraagPlugins:
     def __init__(self):
         self.default_plugins = [
-            "ping_the_server"
+            "ping_the_server",
+            "repo_details"
         ]
         self.misc_plugins = [
             "get_self_destructive_media"

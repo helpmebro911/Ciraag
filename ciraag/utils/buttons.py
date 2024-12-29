@@ -29,3 +29,9 @@ back_misc = [
         Button.inline("Back", b'back_misc')
     ]
 ]
+
+repo = [
+    [
+        Button.url("🔗 Repository", url="https://github.com/iniridwanul/Ciraag")
+    ]
+]
