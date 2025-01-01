@@ -1,7 +1,7 @@
 from ciraag.core.module_injector import *
 from ciraag.core.decorator import Genie
 from ciraag.core.custom_handler import handler
-from ciraag.plugins.fighter.chat_fight import Opponent
+from ciraag.classes.chat_fight import Opponent
 
 @Ciraag(rf"\{handler}so")
 async def find_opponent(event):

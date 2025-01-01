@@ -1,6 +1,6 @@
 from ciraag.core.module_injector import *
 from ciraag.core.custom_handler import handler
-from ciraag.plugins.helper.setup_assistant import Helper
+from ciraag.classes.setup_assistant import Helper
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest
 from telethon.errors.rpcerrorlist import InviteRequestSentError
