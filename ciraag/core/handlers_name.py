@@ -5,7 +5,8 @@ class CiraagPlugins:
             "repo_details"
         ]
         self.misc_plugins = [
-            "get_self_destructive_media"
+            "get_self_destructive_media",
+            "gemini_ai"
         ]
         self.helper_plugins = [
             "execute_helper",
