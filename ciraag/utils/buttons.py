@@ -17,7 +17,8 @@ misc_menu = [
         Button.inline("Raid", b'raid')
     ],
     [
-        Button.inline("Spam", b'spam')
+        Button.inline("Spam", b'spam'),
+        Button.inline("Gemini", b'gemini')
     ],
     [
         Button.inline("Main Menu", b'main_menu')
