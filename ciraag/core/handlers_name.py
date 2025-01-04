@@ -16,7 +16,8 @@ class CiraagPlugins:
             "find_opponent",
             "remove_opponent",
             "chat_fighting",
-            "slangs_bomb"
+            "slangs_bomb",
+            "custom_bomb"
         ]
 
 default_ciraag_plugins = CiraagPlugins().default_plugins

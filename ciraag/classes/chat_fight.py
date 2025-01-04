@@ -101,3 +101,20 @@ class Opponent:
                     await ciraag.send_message(self.chat, "The correct format of Slang Bomb is not used.")
         else:
             await ciraag.send_message(self.chat, "The slang bomb will only trigger when you use the slang bomb command on your enemy's message.")
+    
+    async def bomber_genie(self, event):
+        try:
+            self.chat = event.to_id
+            self.get_user_data = event.message.raw_text.split()
+            self.get_user_data.pop(0)
+            self.spam_amount = int(self.get_user_data[0])
+            self.get_custom_message = " ".join(self.get_user_data)
+            self.get_custom_bomb = self.get_custom_message.split()
+            self.get_custom_bomb.pop(0)
+            self.custom_bomb = " ".join(self.get_custom_bomb)
+            self.default_amount = 0
+            while self.default_amount < self.spam_amount:
+                await ciraag.send_message(self.chat, self.custom_bomb)
+                self.default_amount += 1
+        except ValueError:
+            await ciraag.send_message(self.chat, "The correct format of Custom Bomb is not used.")
