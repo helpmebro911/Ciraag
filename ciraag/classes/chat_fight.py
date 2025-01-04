@@ -43,7 +43,6 @@ class Opponent:
     async def fighter_genie(self, event):
         if event.is_private:
             self.user_id = event.peer_id.user_id
-            await ciraag(SetTypingRequest(self.user_id, SendMessageTypingAction()))
             self.sender = await event.get_sender()
             self.sender_id = self.sender.id
             self.reply = event.id
@@ -52,13 +51,13 @@ class Opponent:
                     if self.sender_id == ciraag_user:
                         pass
                     else:
+                        await ciraag(SetTypingRequest(self.user_id, SendMessageTypingAction()))
                         self.get_first_name = await ciraag(GetFullUserRequest(self.user_id))
                         self.first_name = self.get_first_name.users[0].first_name
                         self.random_hindi_slangs = choice(hindi_slangs)
                         await ciraag.send_message(self.user_id, f"<a href='tg://user?id={self.user_id}'>{self.first_name}</a> {self.random_hindi_slangs}", reply_to=self.reply, parse_mode="html")
         elif event.is_group:
             self.chat = event.to_id
-            await ciraag(SetTypingRequest(self.chat, SendMessageTypingAction()))
             self.user_id = event.from_id.user_id
             self.sender = await event.get_sender()
             self.sender_id = self.sender.id
@@ -68,6 +67,7 @@ class Opponent:
                     if self.sender_id == ciraag_user:
                         pass
                     else:
+                        await ciraag(SetTypingRequest(self.chat, SendMessageTypingAction()))
                         self.get_first_name = await ciraag(GetFullUserRequest(self.user_id))
                         self.first_name = self.get_first_name.users[0].first_name
                         self.random_hindi_slangs = choice(hindi_slangs)
