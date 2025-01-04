@@ -14,11 +14,12 @@ misc_menu = [
     [
         Button.inline("Ping", b'ping'),
         Button.inline("Timer", b'timer'),
-        Button.inline("Raid", b'raid')
+        Button.inline("Gemini", b'gemini')
     ],
     [
         Button.inline("Bomb", b'bomb'),
-        Button.inline("Gemini", b'gemini')
+        Button.inline("Raid", b'raid'),
+        Button.inline("Spam", b'spam')
     ],
     [
         Button.inline("Main Menu", b'main_menu')
