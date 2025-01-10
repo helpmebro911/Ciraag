@@ -8,7 +8,7 @@ async def main():
         module = __import__(f"ciraag.plugins.{plugin_name}", fromlist=[plugin_name])
         if hasattr(module, "load_plugin"):
             await module.load_plugin(ciraag)
-            print(f"Load {plugin_name}")
+            print(f"{plugin_name} plugin loaded successfully")
     await ciraag.start()
     print("Ciraag Started")
     await asyncio.sleep(float("inf"))
