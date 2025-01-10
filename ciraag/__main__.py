@@ -1,6 +1,15 @@
 from ciraag.core.module_injector import *
 from glob import glob
 from asyncio import sleep, run
+from signal import signal, SIGINT
+
+def signal_handler(sig, frame):
+    print("\nReceived signal:", sig)
+    print("Stopping Ciraag gracefully...")
+    ciraag.disconnect()
+    exit(0)
+
+signal(SIGINT, signal_handler)
 
 async def main():
     for plugin in glob("ciraag/plugins/*.py"):
@@ -9,8 +18,12 @@ async def main():
         if hasattr(module, "load_plugin"):
             await module.load_plugin(ciraag)
             print(f"{plugin_name} plugin loaded successfully")
-    await ciraag.start()
-    print("Ciraag Started")
-    await sleep(float("inf"))
+    try:
+        await ciraag.start()
+        print("Ciraag Started")
+        await sleep(float("inf")) 
+    except KeyboardInterrupt:
+        print("\nKeyboardInterrupt received. Stopping Ciraag gracefully...")
+        await ciraag.disconnect()
 
 run(main())
