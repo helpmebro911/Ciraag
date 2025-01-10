@@ -1,1 +1,0 @@
-from .version import ciraag_version
