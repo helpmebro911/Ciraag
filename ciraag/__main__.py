@@ -1,9 +1,9 @@
 from ciraag.core.module_injector import *
-import asyncio
-import glob
+from glob import glob
+from asyncio import sleep, run
 
 async def main():
-    for plugin in glob.glob("ciraag/plugins/*.py"):
+    for plugin in glob("ciraag/plugins/*.py"):
         plugin_name = plugin.replace(".py", "").replace("ciraag/plugins/", "")
         module = __import__(f"ciraag.plugins.{plugin_name}", fromlist=[plugin_name])
         if hasattr(module, "load_plugin"):
@@ -11,6 +11,6 @@ async def main():
             print(f"{plugin_name} plugin loaded successfully")
     await ciraag.start()
     print("Ciraag Started")
-    await asyncio.sleep(float("inf"))
+    await sleep(float("inf"))
 
-asyncio.run(main())
+run(main())
