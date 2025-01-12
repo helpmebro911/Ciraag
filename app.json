@@ -1,0 +1,48 @@
+{
+  "name": "Ciraag",
+  "description": "A powerful pluggable userbot on Telegram.",
+  "logo": "https://raw.githubusercontent.com/iniridwanul/Ciraag/refs/heads/master/assets/ciraag.png",
+  "keywords": [
+    "ciraag",
+    "productivity",
+    "userbot"
+  ],
+  "repository": "https://github.com/iniridwanul/Ciraag",
+  "env": {
+    "api_id": {
+      "description": "Kindly obtain your unique Telegram API ID from my.telegram.org and provide it confidentially. Please do not disclose this information to any third party.",
+      "value": "",
+      "required": true
+    },
+    "api_hash": {
+      "description": "Kindly obtain your unique Telegram API Hash from my.telegram.org and provide it confidentially. Please do not disclose this information to any third party.",
+      "value": "",
+      "required": true
+    },
+    "string_session": {
+      "description": "Please execute the Python script string_session.py using Python3 and retrieve the generated string session. This session data should be treated as strictly confidential and not shared with any external parties.",
+      "value": "",
+      "required": true
+    },
+    "command_handler": {
+      "description": "Command handler use pattern matching to detect and respond to specific user input, so you provide a custom handler of your choice.",
+      "value": "",
+      "required": false
+    },
+    "ciraag_gallery": {
+      "description": "All content saved using Ciraag will be automatically stored in the Ciraag Gallery. To access your saved content, please enter the chat ID of your Ciraag Gallery.",
+      "value": "",
+      "required": true
+    },
+    "gemini_api": {
+      "description": "To take advantage of Gemini, collect the Gemini API from ai.google.dev and provide it here.",
+      "value": "",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
