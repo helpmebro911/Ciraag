@@ -3,7 +3,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from os import remove
 
 ciraag_protection = "@ciraag_protection"
-ciraag_users = 2
+ciraag_users = 7
 
 class SelfDestruct:
     async def save(self, event):
