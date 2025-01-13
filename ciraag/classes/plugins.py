@@ -17,6 +17,7 @@ class PluginManager:
                 sleep(3)
                 Restart_Ciraag()
                 await event.edit("Great news! The plugin installation is complete. To ensure optimal performance, Ciraag is undergoing a reboot. You should be able to start using the new features shortly.")
+                remove("uptime.txt")
                 kill(getpid(), SIGTERM)
         except:
             await event.edit("Oops, something went wrong during the plugin installation. It looks like the plugin might not be the right fit for Ciraag, or there could be a small hiccup in the process. Let's try checking the plugin's compatibility and following the installation steps again.")
@@ -32,6 +33,7 @@ class PluginManager:
                 remove(f"ciraag/plugins/{self.file_name}")
                 Restart_Ciraag()
                 await event.edit(f"Successfully uninstalled the {self.file_name} plugin. Rebooting the Ciraag userbot to ensure a clean unload. Please allow a few seconds for the process to complete.")
+                remove("uptime.txt")
                 kill(getpid(), SIGTERM)
         except:
             await event.edit("There might be an error with uninstalling the plugin.")

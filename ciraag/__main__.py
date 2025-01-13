@@ -2,11 +2,13 @@ from ciraag.core.module_injector import *
 from glob import glob
 from asyncio import sleep, run
 from signal import signal, SIGINT
+from os import remove
 
 def signal_handler(sig, frame):
     print("\nReceived signal:", sig)
     print("Stopping Ciraag gracefully...")
     ciraag.disconnect()
+    remove("uptime.txt")
     exit(0)
 
 signal(SIGINT, signal_handler)
