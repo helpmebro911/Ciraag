@@ -1,6 +1,9 @@
 from os import environ
+from dotenv import load_dotenv
 from telethon import TelegramClient
 from telethon.sessions import StringSession
+
+load_dotenv()
 
 class Ciraag:
     def __init__(self):

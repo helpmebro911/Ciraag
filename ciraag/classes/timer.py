@@ -1,7 +1,9 @@
 from ciraag.core.module_injector import *
 from telethon.tl.functions.users import GetFullUserRequest
+from dotenv import load_dotenv
 from os import remove
 
+load_dotenv()
 ciraag_protection = "@ciraag_protection"
 ciraag_users = 7
 

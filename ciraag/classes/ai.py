@@ -1,8 +1,11 @@
 from ciraag.core.module_injector import *
+from dotenv import load_dotenv
 try:
     from google import generativeai
 except ImportError:
     pass
+
+load_dotenv()
 
 try:
     gemini_api = environ["gemini_api"]
