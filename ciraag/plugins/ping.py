@@ -3,7 +3,7 @@ from ciraag.core.custom_handler import handler
 from datetime import datetime
 
 async def load_plugin(client):
-    @client.on(events.NewMessage(outgoing=True, pattern=rf"\{handler}ping"))
+    @Ciraag(pattern=rf"\{handler}ping")
     async def ping_the_server(event):
         await event.delete()
         class Ping:

@@ -3,7 +3,7 @@ from ciraag.core.custom_handler import handler
 from ciraag.classes.timer import SelfDestruct
 
 async def load_plugin(client):
-    @client.on(events.NewMessage(outgoing=True, pattern=rf"\{handler}tmd"))
+    @Ciraag(pattern=rf"\{handler}tmd")
     async def get_self_destructive_media(event):
         await event.delete()
         media = SelfDestruct()
