@@ -2,6 +2,7 @@ from ciraag.core.module_injector import *
 from glob import glob
 from asyncio import sleep, run
 from signal import signal, SIGINT
+from ciraag.utils.uptime import Ciraag_Uptime
 from os import remove
 
 def signal_handler(sig, frame):
@@ -22,6 +23,8 @@ async def main():
             print(f"{plugin_name} plugin loaded successfully")
     try:
         await ciraag.start()
+        iniuptime = Ciraag_Uptime()
+        iniuptime.uptime()
         print("Ciraag Started")
         await sleep(float("inf")) 
     except KeyboardInterrupt:
