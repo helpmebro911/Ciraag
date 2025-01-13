@@ -1,12 +1,8 @@
 from ciraag.core.module_injector import *
+from time import sleep
+from ciraag.utils import Restart_Ciraag
 from os import kill, getpid, remove
 from signal import SIGTERM
-from subprocess import Popen
-from time import sleep
-
-def restart_script():
-  bash_command = ["bash", "start.sh"]
-  Popen(bash_command)
 
 class PluginManager:
     async def install_plugin(self, event):
@@ -19,7 +15,7 @@ class PluginManager:
                 await self.get_plugin.download_media(file="ciraag/plugins")
                 await event.edit("Plugin download and installation completed.")
                 sleep(3)
-                restart_script()
+                Restart_Ciraag()
                 await event.edit("Great news! The plugin installation is complete. To ensure optimal performance, Ciraag is undergoing a reboot. You should be able to start using the new features shortly.")
                 kill(getpid(), SIGTERM)
         except:
@@ -34,7 +30,7 @@ class PluginManager:
             self.mime_type = self.get_plugin.media.document.mime_type
             if self.get_plugin.media and self.mime_type == "text/x-python":
                 remove(f"ciraag/plugins/{self.file_name}")
-                restart_script()
+                Restart_Ciraag()
                 await event.edit(f"Successfully uninstalled the {self.file_name} plugin. Rebooting the Ciraag userbot to ensure a clean unload. Please allow a few seconds for the process to complete.")
                 kill(getpid(), SIGTERM)
         except:
