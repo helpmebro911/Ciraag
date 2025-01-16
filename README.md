@@ -4,7 +4,7 @@
 
 <p align="center">
 <b>Ciraag</b><br/>
-A powerful multi-featured userbot on Telegram.
+A powerful pluggable userbot on Telegram. 
 </p>
 
 <p align="center">
